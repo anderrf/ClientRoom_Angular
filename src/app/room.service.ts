@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { timeStamp } from 'console';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -12,7 +11,7 @@ export class RoomService {
 
   constructor(private http: HttpClient) { }
 
-  getNome(id: number): Observable<any>{
+  getRoom(id: number): Observable<any>{
     return this.http.get(`${this.baseUrl}/${id}`);
   }
 

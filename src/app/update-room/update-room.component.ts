@@ -18,7 +18,10 @@ export class UpdateRoomComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private roomService: RoomService
-  ) { }
+  ) {
+    this.id = 0;
+    this.room = new Room();
+  }
 
   ngOnInit(){
     this.room = new Room();

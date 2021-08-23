@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Room } from '../room';
 import { RoomService } from '../room.service';
 
 @Component({
@@ -16,7 +17,10 @@ export class RoomDetailsComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private roomService: RoomService
-  ) { }
+  ) {
+    this.id = 0;
+    this.room = new Room();
+  }
 
   ngOnInit(){
     this.room = new Room();

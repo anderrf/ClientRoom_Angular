@@ -16,7 +16,9 @@ export class RoomListComponent implements OnInit {
   constructor(
     private roomService: RoomService,
     private router: Router
-  ) { }
+  ) {
+    this.rooms = new Observable<Room[]>();
+  }
 
   ngOnInit(): void {
     this.reloadData();
