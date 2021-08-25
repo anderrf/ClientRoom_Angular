@@ -1,5 +1,6 @@
-<h3>Create Room</h3>
-<div [hidden]="submitted" style="width: 400px;">
+<h3 class="font-iceberg">Create Room</h3>
+<hr>
+<div [hidden]="submitted" style="width: 400px;" class="mx-auto">
   <form (ngSubmit)="onSubmit()">
     <div class="form-group">
       <label for="name">name</label>
@@ -20,11 +21,14 @@
         <label for="name">endHour</label>
         <input type="text" class="form-control" id="endHour" required [(ngModel)]="room.endHour" name="endHour">
       </div>
-
-    <button type="submit" class="btn btn-success">Submit</button>
+      <div class="d-flex justify-center">
+        <button type="submit" class="btn btn-success my-2 mx-auto">
+          <i class="bi bi-save"></i>
+        </button>
+      </div>
   </form>
 </div>
 
 <div [hidden]="!submitted">
-  <button class="btn btn-success" (click)="newRoom()">Add</button> -->
+  <button class="btn btn-success" (click)="newRoom()">Add</button>
 </div>

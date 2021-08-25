@@ -37,4 +37,8 @@ export class RoomDetailsComponent implements OnInit {
     this.router.navigate(['/rooms'])
   }
 
+  update(){
+    this.router.navigate(['/update', this.id])
+  }
+
 }
